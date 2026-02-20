@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeypot AI - Scam Defense</title>
+    <link rel="stylesheet" href="/static/style.css?v=5">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Analysis Dashboard -->
+        <!-- Sidebar / Cyber Crime Dashboard -->
+        <div class="sidebar">
+            <div class="logo">
+                <span style="font-size: 1.5rem;">🚨 Cyber Cell</span>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Session Card -->
+                <div class="analysis-card">
+                    <label>EVIDENCE ID</label>
+                    <div id="session-display" class="info-value">Loading...</div>
+                </div>
+
+                <!-- Critical Scammer Identity -->
+                <div class="analysis-card" style="border-left: 4px solid #ef4444;">
+                    <label>SCAMMER NAME</label>
+                    <div id="name-display" class="info-value empty">-</div>
+                </div>
+
+                <div class="analysis-card" style="border-left: 4px solid #ef4444;">
+                    <label>LOCATION / ADDRESS</label>
+                    <div id="address-display" class="info-value empty">-</div>
+                </div>
+
+                <!-- Financial Intel -->
+                <div class="analysis-card">
+                    <label>DEMANDED AMOUNT</label>
+                    <div id="amount-display" class="info-value">-</div>
+                </div>
+
+                <div class="analysis-card">
+                    <label>PHONE NUMBERS</label>
+                    <div id="phone-display" class="info-value empty">-</div>
+                </div>
+
+                <div class="analysis-card">
+                    <label>UPI / PAYMENT IDS</label>
+                    <div id="upi-display" class="info-value empty">-</div>
+                </div>
+
+                <div class="analysis-card">
+                    <label>BANK ACCOUNTS</label>
+                    <div id="bank-display" class="info-value empty">-</div>
+                </div>
+
+                <div class="analysis-card">
+                    <label>SUSPICIOUS LINKS</label>
+                    <div id="link-display" class="info-value empty">-</div>
+                </div>
+
+                <div class="analysis-card">
+                    <label>THREAT LEVEL</label>
+                    <div id="status-display" class="info-value status-monitoring">Monitoring...</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="report-btn" class="btn-primary" style="background-color: #ef4444; margin-bottom: 10px;">📄
+                    Generate Hackathon JSON</button>
+                <div id="json-output-containter"
+                    style="display:none; background:#1e1e1e; padding:10px; border-radius:4px; font-family: monospace; font-size:11px; max-height: 200px; overflow-y:auto; color: #a3e635; margin-bottom: 10px;">
+                    <pre id="json-output"></pre>
+                </div>
+                <button id="reset-btn" class="btn-secondary">Reset Session</button>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <h2>Active Session</h2>
+                <span class="status-indicator">● Online</span>
+            </div>
+
+            <div id="chat-messages" class="messages-container">
+                <!-- Messages will appear here -->
+                <div class="message system">
+                    <div class="message-content">
+                        System initialized. Monitoring for scam activity...
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type a message to simulate scammer..." />
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js?v=5"></script>
+</body>
+
+</html>
